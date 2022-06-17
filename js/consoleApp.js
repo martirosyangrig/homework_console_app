@@ -106,52 +106,54 @@ const app = {
 	},
 	isOpened(start, end) {
 
-    if (start >= end) {
-      app.restaurantDetails[7].isOpen = false;
-      const a = function(){
-        return "Այս պահին անհասանելի ենք";
-      };
+		if (start >= end) {
 
-      app.callCenter = a;
-      
-    }else {
-      app.restaurantDetails[7].isOpen = true;
-    }
+			app.restaurantDetails[7].isOpen = false;
+			const a = function(){
+				return "Այս պահին անհասանելի ենք";
+			};
+			app.callCenter = a;
+		
+		}else {
+			app.restaurantDetails[7].isOpen = true;
+		}
 	},
 
-  firstOrder(povr, waitress, food){
-	if ( app.restaurantDetails[7].isOpen === true && povr === "Արտակ Ադամյան") {
-		return `
-		1-ին։ Ես պատվիրում եմ  ${food}
-			${waitress}ը բերեց ձեր ${food}ը
-		`;
+  	firstOrder(povr, waitress, food){
 
-	  }else if ( app.restaurantDetails[7].isOpen === true && povr !==  "Արտակ Ադամյան"){
-		return " 1-ին։ Ես ցանկանւմ եմ Արտակի կերակուրները ";
-		
-	  }else {
-		return "1-ին հաճախորդ Ռեստորանը փակ է";
-	}
-  },
+		if ( app.restaurantDetails[7].isOpen === true && povr === "Արտակ Ադամյան") {
+			
+			return `
+			1-ին։ Ես պատվիրում եմ  ${food}
+				${waitress}ը բերեց ձեր ${food}ը
+			`;
 
-  anotherOrder (order, waitress) {
+		}else if ( app.restaurantDetails[7].isOpen === true && povr !==  "Արտակ Ադամյան"){
+			return " 1-ին։ Ես ցանկանւմ եմ Արտակի կերակուրները ";
+			
+		}else {
+			return "1-ին հաճախորդ Ռեստորանը փակ է";
+		}
+ 	},
+
+  	anotherOrder (order, waitress) {
 	
-	if (order === "Գարեյուր" &&  app.restaurantDetails[7].isOpen === true){
-       
-	   return `
-		${waitress } ասում է որ գարեջուր չկա
-			կարող եք պատվիրել հետեվյալը - ${app.restaurantMenu[2].item3}
-	   `;
-	}else if (app.restaurantDetails[7].isOpen !== true && order){
-		return `2-րդ հաճախորդ Ռեստորանը փակ է `;
-	}else {
+		if (order === "Գարեյուր" &&  app.restaurantDetails[7].isOpen === true){
 		
-		return `
-		2-րդ։ ես պատվիրում եմ ${order}
-			${waitress}ը բերեց ձեր ${order}ը
-		`;
-	}
-  }
+			return `
+				${waitress } ասում է որ գարեջուր չկա
+				կարող եք պատվիրել հետեվյալը - ${app.restaurantMenu[2].item3}
+			`;
+		}else if (app.restaurantDetails[7].isOpen !== true && order){
+			return `2-րդ հաճախորդ Ռեստորանը փակ է `;
+		}else {
+			
+			return `
+			2-րդ։ ես պատվիրում եմ ${order}
+				${waitress}ը բերեց ձեր ${order}ը
+			`;
+		}
+  	}
 };
 
 app.isOpened(2, 24);
