@@ -2,3 +2,5 @@
 .jshintrc
 package-lock.json
 package.json
+/css
+index.html
