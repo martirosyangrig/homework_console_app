@@ -137,8 +137,7 @@ const app = {
   anotherOrder (order, waitress) {
 	
 	if (order === "Գարեյուր" &&  app.restaurantDetails[7].isOpen === true){
-       console.log();
-	   console.log();
+       
 	   return `
 		${waitress } ասում է որ գարեջուր չկա
 			կարող եք պատվիրել հետեվյալը - ${app.restaurantMenu[2].item3}
