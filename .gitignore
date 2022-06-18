@@ -1,7 +1,0 @@
-node_modules/
-.jshintrc
-.gitignore
-package-lock.json
-package.json
-css/
-index.html
