@@ -142,7 +142,8 @@ const app = {
 		
 			return `
 				${waitress } ասում է որ գարեջուր չկա
-				կարող եք պատվիրել հետեվյալը - ${app.restaurantMenu[2].item3}
+				
+				կարող եք պատվիրել հետեվյալը - ${JSON.stringify(app.restaurantMenu[2])}
 			`;
 		}else if (app.restaurantDetails[7].isOpen !== true && order){
 			return `2-րդ հաճախորդ Ռեստորանը փակ է `;
@@ -164,5 +165,5 @@ console.log(client);
 const secondClient = app.firstOrder(app.restaurantStaff[9].cook, app.restaurantStaff[2].waiter, app.restaurantMenu[0].item5);
 console.log(secondClient);
 
-const thirdClient = app.anotherOrder(app.restaurantMenu[2].item3 , app.restaurantStaff[3].waiter );
+const thirdClient = app.anotherOrder("Գարեյուր", app.restaurantStaff[3].waiter );
 console.log(thirdClient);
