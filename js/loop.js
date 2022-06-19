@@ -32,3 +32,35 @@ for(let i = 1; i <= 20; i++) {
     }    
 }
 
+// stexcenq infinity loop fori hamar
+
+for(let i = 5; i > 1; i++) {
+    console.log(i);
+    if (i === 222777) {
+        break;
+    }
+}
+
+
+//  tpel mijakayqi bolor tvere irenc hakadir tverov
+
+const mij = 11;
+
+for(let i = 0; i <= mij; i++) {
+    console.log(i, -i);
+}
+
+
+//          while loop
+
+// tpel mijakayqi bolor tveri 3 vra bajanvac mnacorde
+
+const marg = 35;
+let mnac;
+let i = 0;
+while (i <= marg) {
+    mnac = i % 3;
+    console.log(i, mnac);
+    i++;
+}
+
