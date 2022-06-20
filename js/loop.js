@@ -64,3 +64,14 @@ while (i <= marg) {
     i++;
 }
 
+
+//  
+
+let n = 10;
+let j = 0;
+while(j <= n) {
+    console.log("Hello Sami");
+    j++;
+}
+
+//   
