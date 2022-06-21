@@ -74,4 +74,24 @@ while(j <= n) {
     j++;
 }
 
-//   
+//   TPEL 1 - 10 MIJAKAYQI BOLOR TVERI QARAKUSINERE
+
+let mid = 10;
+let sqrt = 1;
+let k = 1;
+
+while(k <= 10) {
+    sqrt += k * k;
+    k++;
+}
+console.log(sqrt);
+
+
+// do while 
+let year = 2022;
+let myage = 2019;
+do {
+    console.log(myage);
+    myage++;
+
+}while (myage < 2022);
