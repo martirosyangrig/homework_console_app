@@ -195,3 +195,21 @@ function mig() {
 
 }
 console.log(mig());
+
+
+
+// stexcel funkcia vor kstana tiv vorpes parametr vore klini mer zangvaci erkarutyune 
+// petq e veradarcni fibonachi hajordakanutyune zangvaci tesqov  (bonus)
+
+function fibonachi(n) {
+    if(n === 1 || n <= 0 ){
+        return 0;
+    }
+    let arr = [0, 1];
+    for(let i = 2; i < n; i++) {
+        arr[i] = arr[i - 2] + arr[i - 1];
+    }
+    return arr;
+}
+console.log(fibonachi(56));
+
