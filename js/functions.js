@@ -81,7 +81,7 @@ function getMin(arr) {
 console.log(getMin([5, 12, -2, 54, 88, 0]));
 
 
-// 5 (barderic) grel funkcia vore khashvi mutqagrvac tvi 0 - 10 mijakayqi bolor tveri
+// 5  grel funkcia vore khashvi mutqagrvac tvi 0 - 10 mijakayqi bolor tveri
 // vra bajanvac mnacorde ev kveradardzni ayd tvere zangvaci tesqov  (mutqagrvac tive petq e lini mec kam havasar >= 10)
 
 function morgul(arg) {
@@ -185,12 +185,13 @@ function date(age) {
 }
 
 function mig() {
-    if (date() > 18){
+    if (date(15) > 18){
         return "acces";
-    }else if(date() < 18){
+    }else if(date(15) < 18){
         return "not acces";
     }else {
         return "Sorry you need to be older than 18";
     }
 
 }
+console.log(mig());
