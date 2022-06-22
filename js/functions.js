@@ -185,9 +185,9 @@ function date(age) {
 }
 
 function mig() {
-    if (date(15) > 18){
+    if (date(15) < 2004 ){
         return "acces";
-    }else if(date(15) < 18){
+    }else if(date(15) > 2004){
         return "not acces";
     }else {
         return "Sorry you need to be older than 18";
@@ -213,3 +213,26 @@ function fibonachi(n) {
 }
 console.log(fibonachi(56));
 
+
+// funkcia vore hashvume 2 tveri vra aranc mnacord bajanvox amenapoqr drakan tive
+
+
+function get(num1 , num2) {
+    let result;
+    if(num1 >= num2) {
+        result = num1;
+    }else{
+        result = num2;
+    }
+    while(true){
+        if(result % num1 === 0 && result % num2 === 0){
+        return result;
+        
+        }else {
+            result ++;
+        }
+
+    }
+}
+
+console.log(get(152, 61));
