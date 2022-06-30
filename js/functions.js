@@ -55,7 +55,7 @@ function makeNewArr(arr) {
     }
     return newArr;
 }
-console.log(makeNewArr([2, 4, 5 , 8 , 1 , 6, 5 ]));
+console.log(makeNewArr([2, 4, 5 , 8 , 1 ,  5 ]));
 
 
 
@@ -236,3 +236,42 @@ function get(num1 , num2) {
 }
 
 console.log(get(152, 61));
+
+
+
+function astchan(num1, num2){
+    let a = num1;
+    for(let i = 1; i < 3; i++){
+        num1 = a * num1;
+    }
+    return num1;
+}
+
+function square(num1,num2){
+    let res = 1;
+    for(let i = 0;i <num2;i++){
+        res*= num1;
+    }
+    return res;
+}
+
+
+
+
+function ax(n, l){
+    
+    let i = 0;
+    while(true){
+        if(square(i , l) === n){
+            console.log(i);
+            break;
+        }
+        if(i === n){
+            console.log("trvac tvic klor armat durs chi galis");
+            break;
+        }
+        i++;
+    }
+}
+
+ax(125, 3);

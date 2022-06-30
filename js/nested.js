@@ -1,72 +1,76 @@
 "use strict";
-let song = "Tonacar jan tonacar...";
-let result = "";
-let s = "*";
-for (let i = 0; i <= 7; i++) {
-    for(let j = 7; j >= i; j--){
-        
-        if(j === 0){
-            result += "*";
-            break;      
+
+let numberOfFilms;
+function isInt() {
+	numberOfFilms = +prompt("Քանի՞ ֆիլմ եք դիտել այսօր", "");
+
+	while (true) {
+        if(numberOfFilms == null  || numberOfFilms == "" || isNaN(numberOfFilms)){
+            numberOfFilms = +(prompt("Քանի՞ ֆիլմ եք դիտել այսօր", ""));
         }
-        if(j === i){
-            result += s + "**";
-            s += "**";
+		else{
             break;
-        } 
-        result += " ";
-    }
-    result += "\n";
-}
-console.log(result, song);
-
-
-
-
-//kalkulyator
-
-function calcul(number1, number2, op) {
-    switch (op) {
-        case "+": console.log(number1 + number2); break;
-        case "-": console.log(number1 - number2); break;
-        case "*": console.log(number1 * number2); break;
-        case "/": console.log(number1 / number2); break;
-        case "%": console.log(number1 % number2); break;
-        default: console.log("Xndrum em mutqagreq '+ , - , * , / , % '");
-    }
-
-} 
-calcul(8, 4, "*");
-
-
-// loooper irar mej
-
-
-for(let i = 0; i <= 6; i++){
-
-    for(let j = 6; j >= i; j--){
-        for(let k = 0; k < j; k++) {
-            console.log(k);
-
         }
-        console.log(j);
-    }
-    console.log(i);
+	}
 }
+isInt();
+const personalMovieDB = {
+	count: numberOfFilms >= 1 ? numberOfFilms : 0,
+	movies: {},
+	actors: {},
+	genres: [],
+	privat: true,
 
-
-// nuyne whileov
-
-let i = 0;
-while(i <= 6){
-    let j = 6;
-    while(j >= i){
-        let k = 0;
-        while(k < j){
-            k++;
-            console.log(i ,j , k);
+    showMyDB(){
+        if(personalMovieDB.privat === true){
+            console.log(personalMovieDB);
+        }else{
+            console.log("knereq chneq karox cuyc tal mer db");
         }
-        j--;
+    },
+
+    yourFavoriteGenres() {
+        for(let i = 0; i <= 2; i++){
+            const x = prompt(`« Ձեր նախընտրելի ժանրը» ${i + 1}`);
+            
+            if(isNaN(x) && x != null && x != "" && x.length <= 20){
+                personalMovieDB.genres[i] = x;
+            }else{
+                console.log("sxal e texi unecel, mutqagreq bar");
+                i--;
+            }
+        }
     }
-    i++;
+};
+personalMovieDB.yourFavoriteGenres();
+
+
+	if (numberOfFilms < 10) {
+		console.log("Դուք նայել եք բավականին քիչ ֆիլմեր");
+	} else if (numberOfFilms < 30) {
+		console.log("Դուք ֆիլմի սիրահար եք");
+	} else if (numberOfFilms >= 30) {
+		console.log("Դուք կինոման եք !!!");
+	} else {
+		console.log("Տեղի է ունեցել խնդիր, ըստ երևույթի դուք թիվ չեք նշել");
+	}
+
+function myFilms(){
+    for (let i = 0; i < 2; i++) {
+        const a = prompt("Ո՞ր ֆիլմն եք վերջերս դիտել", "");
+        const b = prompt("Ինչքա՞ն այդ ֆիլմը կգնահատեիք");
+    
+        if (a != null && b != null && a != "" && b != "" && a.length < 50) {
+            a.trim();
+            b.trim();
+            personalMovieDB.movies[a] = b;
+            console.log("DONE");
+        } else {
+            console.log("ERROR");
+            i--;
+        }
+    }
 }
+
+myFilms();
+personalMovieDB.showMyDB();
