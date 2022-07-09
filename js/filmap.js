@@ -86,3 +86,6 @@ showMyDB();
 
 
 
+let a = require("enter your age")();
+
+console.log(a+5);
