@@ -101,23 +101,3 @@ const user = onlineShop.orderOne();
 console.log(user);
 
 
-
-// const str = "hello, my name is Ani. Grig is my fest friend forever. I love him very much. He is so cute, he is the best boy in the world. ";
-// const a = str.slice(23, 27);
-// const b = str.slice(55, 61);
-// const c = str.slice(66, 75);
-// const d = str.slice(7, 9);
-// const e = str.slice(118, 124);
-// console.log(`${a} ${b} you ${c}. You are ${d} ${e}`);
-
-// let shopWorkers = [
-// 	{callCenter: "Rita Sargsyan"},
-// 	{deliver: "Serg Sargsyan"},
-// 	{deliver: "Rob Qoch"},
-// 	{itSpecialist: "Sami"},
-	
-// ];
-
-// shopWorkers.forEach(function(val){
-// 	console.log(val);
-// })
