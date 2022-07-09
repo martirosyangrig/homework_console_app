@@ -76,6 +76,11 @@ const onlineShop = {
 			console.log("menq chenq karox cuyc tal ");
 		}
 	},
+	sortByPrice(){
+		// stex kgrem funkcia vore bolor apranqnere kqci zangvai mej ira gnerov achman kargov 
+		// mnac tenam vor algorithmov
+
+	},
 	runCode(){
 		onlineShop.showOurProduct();
 		onlineShop.showOurWorkers();
