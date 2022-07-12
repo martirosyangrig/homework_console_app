@@ -1,108 +1,105 @@
-"use strict";
+"use stict";
+// forEach
+function forEach(arr, func){
+	for(let i = 0; i < arr.length; i++){
+		func(arr[i], i);
+	}
+}
+const arr = [4, 8, 10];
 
-const onlineShop = {
-	shopDetails: [
-		{address: "Ejmiacin, kirov"},
-		{number: "010 000-001"},
-		{type: "online-shop"},
-		{owner: "group4"},
-		{delivery: true},
-		{open: true},
-		{workTime: "8:00 - 20:00"}
-	],
-	shopWorkers: [
-		{callCenter: "Rita Sargsyan"},
-		{deliver: "Serg Sargsyan"},
-		{deliver: "Rob Qoch"},
-		{itSpecialist: "Sami"},
-		
-	],
-	shopMenu:{
-		gadjets: [
-			{iphone13: 1200},
-			{samsung22: 1100},
-			{xiaomiNote11: 350},
-			{rolex: 18500}
-		],
-		drresses: [
-			{coat: 25},
-			{jeans: 12},
-			{shoes: 120}
-		],
-		cars: [
-			{bmwX6: 22500},
-			{bmwX5: 8500},
-			{bmwE92: 14000},
-			{washingMachine: 350}
-		],
-	
-		guns: [
-			{pistolTT: 350},
-			{ak74: 75}
-		],
-		drugs: [
-			{cocain: 200},
-			{weed: 12},
-			{hoktemberyaniPlan: "free"}
-		]
-		
-	},
-	showOurProduct(){
-		for(let key in onlineShop.shopMenu){
-			if(typeof onlineShop.shopMenu[key] === "object"){
-				for(let nkey in onlineShop.shopMenu[key]){
-					if(typeof onlineShop.shopMenu[key][nkey] === "object" ){
-						for(let nnkey in  onlineShop.shopMenu[key][nkey] ){
-							console.log(`
-						bajin  ${key}   - apranq ${nnkey}
-					`);
-						}
-					}
-				}
-			}
-		}
-	},
-	showOurWorkers(){
-		onlineShop.shopWorkers.forEach(function(val){
-			for(let key in val){
-				console.log(val[key]);
-			}
-		});
-	},
-	showMyshop(){
-		if(onlineShop.shopDetails[5].open){
-			console.log(onlineShop);
-		}else{
-			console.log("menq chenq karox cuyc tal ");
-		}
-	},
-	sortByPrice(){
-		// stex kgrem funkcia vore bolor apranqnere kqci zangvai mej ira gnerov achman kargov 
-		// mnac tenam vor algorithmov
+forEach(arr, function(val){
+	console.log(val);
+});
 
-	},
-	runCode(){
-		onlineShop.showOurProduct();
-		onlineShop.showOurWorkers();
-		onlineShop.showMyshop();
-	},
-	orderOne(){
-		if(onlineShop.shopWorkers[1] === "Serg Sargsyan"){
-			for(let key in onlineShop.shopMenu.gadjets){
-				if(onlineShop.shopMenu.gadjets[key] < 1500 && key === "samsung22"){
-					console.log("please, i want that item");
-				}
-			}
-		}else{
-			console.log("I want serjikin");
+
+// split function
+
+function split(string, lim){
+	let arr = [];
+	let j = 0;
+	let k = 0;
+	for(let i = 0; i < string.length; i++){
+		if(string.slice(i, i+1) === lim ){
+			arr[k] = string.slice(j , i );
+			j = i ;
+			k++;
+		}else if(i + 1 === string.length){
+			arr[i] = string.slice(j + 1, i + 1 );
 		}
 	}
+	return arr;
+}
 
-	
+console.log(split("helo guys", " "));
+
+
+let str =  "helo guys";
+
+console.log(str.slice(4, 5));
+
+
+
+
+
+// copy object 
+
+
+const aobj = {
+	number: 5,
+	valeu: "asas"
 };
-onlineShop.runCode();
 
-const user = onlineShop.orderOne();
-console.log(user);
+const bobj = Object.assign({}, aobj);
+
+aobj.number = 10;
+
+console.log(aobj);
+console.log(bobj);
 
 
+//copy arr
+
+const narr = [5, -9, "val", true];
+
+const copyArr = narr.slice();
+
+narr[3] = false;
+
+console.log(narr);
+console.log(copyArr);
+
+
+
+
+// sort
+
+let someArr = [4, 9, 2, 1, 0, 6 , -7 , 522, -8, 12, -1000, 88888, -122, 45, 64, 35];
+function sort(arr){
+	let newArr = [];
+	while(true){
+	
+		let min = arr[0];
+		for(let j = 0; j <= arr.length; j++){
+			if(arr[j] < min){
+				min = arr[j];
+			}
+		}
+		newArr.push(min);
+		arr.splice(arr.indexOf(min), 1);
+		if(arr[0] === undefined){
+			break;
+		}
+	}
+	return newArr;
+}
+
+console.log(sort(someArr));
+
+
+
+const bb = [ 4, 9, 2, 1, 0, 6 , -7 , 522, -8, 12];
+
+bb.splice(6,1);
+
+console.log(bb);
+console.log(bb[6]);
