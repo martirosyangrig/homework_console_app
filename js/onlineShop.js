@@ -96,10 +96,3 @@ function sort(arr){
 console.log(sort(someArr));
 
 
-
-const bb = [ 4, 9, 2, 1, 0, 6 , -7 , 522, -8, 12];
-
-bb.splice(6,1);
-
-console.log(bb);
-console.log(bb[6]);
